@@ -1,9 +1,6 @@
 import subprocess
 import os
 
-# -------------------------
-# CONFIG
-# -------------------------
 input_file = "input/test-audio.wav"       # your video file
 output_audio = "output/extracted_audio.wav"  # where audio will be saved
 # -------------------------
