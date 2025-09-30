@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pycache/
+
+# Virtual environment (if you ever use venv)
+venv/
+env/
+
+# Output folders
+output/
+input/extracted_audio.wav
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Pydub temporary files
+*.tmp
