@@ -9,16 +9,14 @@ if os.path.exists(output_folder):
     shutil.rmtree(output_folder)
 os.makedirs(output_folder, exist_ok=True)
 
-# -------------------------
-# CONFIG
-# -------------------------
+
 input_audio = "output/extracted_audio.wav"
 segments_file = "segments.json"
 output_folder = "output/segments"
 
-# Silence trimming configuration (optional)
-SILENCE_THRESH = -40  # in dBFS, adjust based on audio level
-MIN_SILENCE_LEN = 100  # minimum silence length to detect in ms
+# Silence trimming configuration
+SILENCE_THRESH = -40  
+MIN_SILENCE_LEN = 100 
 # -------------------------
 
 
@@ -29,9 +27,8 @@ def trim_silence(audio_segment, silence_thresh=SILENCE_THRESH, min_silence_len=M
         silence_thresh=silence_thresh)
 
     if not nonsilent_ranges:
-        return audio_segment  # no silence detected, return original
+        return audio_segment  
 
-    # Use start of first nonsilent, and end of last nonsilent range to trim
     start_trim = nonsilent_ranges[0][0]
     end_trim = nonsilent_ranges[-1][1]
 
