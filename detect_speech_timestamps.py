@@ -2,14 +2,10 @@ import json
 import os
 from pydub import AudioSegment, silence
 
-# -------------------------
-# CONFIG
-# -------------------------
 input_audio = "output/extracted_audio.wav"
 output_json = "segments.json"
-min_silence_len = 500   # 1 sec silence
+min_silence_len = 500  
 silence_thresh_offset = 14
-# -------------------------
 
 print("🔍 Detecting speech timestamps...")
 
